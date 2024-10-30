@@ -35,6 +35,12 @@
 ### 3.2 Üzleti folyamatok
 
 ## 4. Követelmények
+Webes és desktop környezetre is kifejlesztett megoldás.
+A rendszer fejlesztése HTML, CSS, JavaScript, Java és MySQL segítségével
+történik.
+A rendszer rendelkezik egy átlátható grafikus felhasználói felülettel és támogatja a
+felhasználói szerepköröket.
+Megszakításmentes működés és folyamatos adatkapcsolat az adatbázissal.
 
 ### Funkcionális követelmények
 
@@ -68,14 +74,16 @@
 
 
 ## 8. Architekturális terv
+A rendszerhez szükséges egy webböngésző vagy egy asztali környezet, amely támogatja a
+Java Swing futtatását. A Java és MySQL biztosítja a kliens és az adatbázis közötti
+kommunikációt, így az adatokat közvetlenül a háttérrendszerbe továbbítja.
 
-### Webszerver
+### Webszerver nem szükséges hozzá.
 
-### Adatbázis rendszer
-
-### A program elérése, kezelése
+### Adatbázis rendszert a mySQL biztosítja.
 
 ## 9. Adatbázis terv
+Szükség van egy adatbázisra ami tárolja a felhasználónevet,aktuális dátumot,egy azonosítókat.
 
 ## 10. Implementációs terv
 
@@ -104,10 +112,8 @@ például. Teszt #01 | Regisztráció | A felhasználó az adatok megadásával 
 ... | ... | ... | ... | ...
 
 ## 12. Telepítési terv
-
-Fizikai telepítési terv: 
-
-Szoftver telepítési terv: 
+A rendszer futtatásához telepíteni kell a Java környezetet, valamint szükséges egy megfelelő
+adatbázis-kapcsolat a MySQL kiszolgálóhoz.
 
 ## 13. Karbantartási terv
 
