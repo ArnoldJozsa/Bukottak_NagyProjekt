@@ -106,6 +106,11 @@ kommunikációt, így az adatokat közvetlenül a háttérrendszerbe továbbítj
 Szükség van egy adatbázisra ami tárolja a felhasználónevet,aktuális dátumot,egy azonosítókat.
 
 ## 10. Implementációs terv
+•	HTML és CSS: Az alapvető felépítést és dizájnt biztosítja.
+•	Java: A backend logika és az adatkezelés Java kódban valósul meg, a Java Swing segítségével pedig a grafikus interfész kerül kialakításra.
+•	MySQL: Az adatokat MySQL adatbázisban tároljuk, amely gyors hozzáférést és hatékony adatkezelést biztosít.
+
+Ezekkel a fejlesztési lépésekkel egy átlátható, könnyen használható és bővíthető kávézó menedzsment rendszert hozunk létre, amely minden szükséges funkciót biztosít a kávézó működésének támogatásához.
 
 ## 11. Tesztterv
 
