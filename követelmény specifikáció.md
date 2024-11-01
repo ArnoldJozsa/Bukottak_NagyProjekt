@@ -3,7 +3,7 @@
 ## 1. Áttekintés
 
 ## 2. A jelenlegi helyzet leírása
-
+Számos kávézó még mindig manuálisan, papíralapú nyilvántartásokkal vagy egyszerű táblázatokkal kezeli a rendeléseket és számlázást. Ezek a módszerek időigényesek, gyakran hibalehetőségekkel járnak, és nem támogatják a gyorsan növekvő igényeket. Ez a projekt célja, hogy egy modern, könnyen használható, asztali megoldást biztosítson, amely gyors rendeléskezelést, automatizált számlázást és egyszerű adminisztrációt kínál.
 ## 3. Vágyálomrendszer
 A projekt célja egy olyan egyszerű, letisztult felületű, Java Swing alapú kávézó-kezelő
 alkalmazás létrehozása, amely gyorsan, hatékonyan támogatja a rendelésfelvételt, a
