@@ -59,7 +59,20 @@ téve az új rendelés rögzítését, módosítását és törlését.
 
 ![képnév](gitlink ahol a kép van)
 
-## 9. Forgatókönyvek
+## 9. Forgatókönyv
+Szereplők: 
+ - Felhasználó (kávézó személyzete)
+ - A Cafe Shop Management System
+   alkalmazás.
+
+ 1. A felhasználó megnyitja az alkalmazást, és új rendelést kezd.
+ 2. A rendelés részletező oldalon kiválasztja a rendelni kívánt termékeket, megadja a
+    darabszámot, és véglegesíti a rendelést.
+ 3. Az alkalmazás automatikusan kiszámítja a végösszeget, amely megjelenik a
+    számlaképernyőn.
+ 4. A felhasználó kinyomtatja a számlát, és lezárja a rendelést.
+ 5. Az alkalmazás nap végén összegzi a rendeléseket és bevételeket, amelyet az
+    adminisztrációs felületén jelenít meg.
 
 ## 10. Funkció - követelmény megfeleltetése
 
