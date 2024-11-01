@@ -31,7 +31,7 @@
 ## 3. Üzleti folyamatok modellje
 
 ### 3.1 Üzleti szereplők
-
+A rendszer fő szereplői az adminisztrátor és az alkalmazottak. Az adminisztrátor feladata az alkalmazottak hozzáférésének szabályozása és az üzleti folyamatok irányítása, míg az alkalmazottak a napi rendelés- és készletkezelést végzik.
 ### 3.2 Üzleti folyamatok
 
 ## 4. Követelmények
