@@ -14,7 +14,7 @@ minimális számítógépes ismeretekkel is. A rendszer célja az is, hogy egysz
 legyen a termékek hozzáadása és árazása, valamint hogy egy egyszerű, de átfogó napi
 összesítést biztosítson az értékesítésekről és bevételekről.
 ## 4. Jelenlegi üzleti folyamatok modellje
-
+A jelenlegi üzleti folyamatok többnyire manuálisak, papíralapú rendelésfelvétellel, amely időigényes és hajlamos a hibákra. A kávézók nagy része nehezen követi nyomon a napi bevételeket, és nincs megfelelő rendszer a termékek árainak gyors módosítására vagy a rendelési adatok összegzésére.
 ## 5. Igényelt üzleti folyamatok modellje
 
 ## 6. Követelménylista
