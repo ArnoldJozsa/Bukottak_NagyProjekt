@@ -24,3 +24,6 @@ A jelenlegi üzleti folyamatok többnyire manuálisak, papíralapú rendelésfel
 | K1 | ... | ... | ... |
 
 ## 7. Fogalomtár
+•	Rendelés: Az ügyfél által kiválasztott termékek egy tranzakcióhoz kapcsolódó listája.
+•	Számla: A rendelés végösszegét tartalmazó dokumentum, amely az ügyfél számára átadható.
+•	Adminisztráció: A termékek és árak kezelése, valamint a bevételek nyomon követése.
