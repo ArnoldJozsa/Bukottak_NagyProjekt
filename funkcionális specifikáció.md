@@ -20,6 +20,13 @@ Skálázhatóság: A rendszer új tételekkel és funkciókkal bővíthető, ig�
 alkalmazkodva a különféle vendéglátóhelyek igényeihez.
 
 ## 6. Használati esetek
+1.	Rendelés hozzáadása: A felhasználó hozzáadhat új rendelést az alkalmazáson belül a termék kiválasztásával, darabszám megadásával, majd a rendelés rögzítésével.
+   
+2.	Számla készítése és nyomtatása: Miután a rendelés véglegesítésre került, a rendszer kiszámítja a végösszeget, és lehetőséget biztosít a számla nyomtatására.
+   
+3.	Termékek és árak módosítása: Az alkalmazás lehetőséget biztosít a felhasználó számára, hogy új termékeket adjon hozzá vagy módosítsa a meglévő termékek árát.
+
+4. Napi összegzés: Az alkalmazás összegzi az aznapi rendeléseket és bevételeket, amely segíti az adminisztratív munkát.
 
 ## 7. Megfeleltetés, hogyan fedik le a használati eseteket a követelményeket
 Rendelés kezelése: A rendszer gyors és intuitív rendeléskezelést biztosít, lehetővé
