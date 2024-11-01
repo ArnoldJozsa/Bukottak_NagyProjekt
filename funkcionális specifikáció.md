@@ -6,6 +6,16 @@ A legtöbb kávézó és kis vendéglátóhely gyakran manuálisan, papíralapú
 ## 3. Jelenlegi üzleti folyamatok modellje
 
 ## 4. Igényelt üzleti folyamatok modellje
+A Cafe Shop Management System az alábbi alapelveket követi:
+
+ - Egyszerű használat: Az alkalmazás grafikus felhasználói felülete egyszerű
+      kezelhetőséget biztosít a rendelésfelvétel, számlázás és adminisztráció során.
+ - Gyors működés: Az alkalmazás lehetővé teszi, hogy a rendeléseket gyorsan
+      rögzítsék és feldolgozzák, csökkentve a várakozási időt.
+ - Pontosság és adatvédelem: A rendelési adatok biztonságosan tárolódnak, és a
+      számlázás automatikusan történik, minimalizálva az emberi hibák lehetőségét.
+ - Skálázhatóság: A rendszer új tételekkel és funkciókkal bővíthető, igény szerint
+      alkalmazkodva a különféle vendéglátóhelyek igényeihez.
 
 ## 5. Követelménylista
 A Cafe Shop Management System az alábbi alapelveket követi:
