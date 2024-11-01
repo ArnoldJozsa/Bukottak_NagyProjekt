@@ -1,6 +1,6 @@
 # Funkcionális specifikáció
 ## 1. Jelenlegi helyzet leírása
-
+A legtöbb kávézó és kis vendéglátóhely gyakran manuálisan, papíralapú nyilvántartásokon vagy egyszerű digitális eszközökön végzi a rendelésfelvételt és számlázást, amely időigényes és pontatlan lehet. A megrendelő egy könnyen kezelhető, minden alapvető funkciót biztosító asztali alkalmazást igényel, amely a rendelési folyamatokat és a fizetések adminisztrálását támogatja.
 ## 2. Vágyálomrendszer leírása
 
 ## 3. Jelenlegi üzleti folyamatok modellje
