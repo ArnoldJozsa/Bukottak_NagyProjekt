@@ -77,6 +77,12 @@ Megszakításmentes működés és folyamatos adatkapcsolat az adatbázissal.
 ### 5.2 Menühierarchiák
 
 ## 6. Fizikai környezet
+A rendszer fejlesztése HTML, CSS, JavaScript, Java Swing és MySQL technológiákkal történik, biztosítva a böngésző- és platformfüggetlen működést.
+
+ •	Felépítés és dizájn: A weboldal struktúráját HTML és CSS kombinációja alkotja, 
+   míg a desktop alkalmazásban a Java Swing biztosítja a felhasználói élményt.
+ •	Platformfüggetlen elérhetőség: A rendszer platformfüggetlen, 
+   így különböző eszközökön futtatható, például Windows, macOS, Linux környezetben.
 
 ### Vásárolt softwarekomponensek és külső rendszerek
 
