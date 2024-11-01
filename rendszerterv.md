@@ -2,6 +2,15 @@
 ## 1. A rendszer célja
 
 ## 2. Projektterv
+A projekt fejlesztése HTML, CSS, JavaScript, Java Swing és MySQL adatbázis segítségével történik.
+ •	Frontend: HTML és CSS biztosítja a felhasználói felületet, míg a Java Swing a desktop alkalmazás GUI-ját.
+ •	Backend: Java és MySQL használatával valósul meg, ahol a Java program kezeli a backend logikát, a MySQL pedig a rendszer adatbázisának kezelését biztosítja.
+
+A projekt főbb felelősei:
+ •	Józsa Arnold Albin
+ •	Kovács Enikő
+ •	Mariotti Lili
+ •	Zerényi Boglárka
 
 ### 2.1 Projektszerepkörök, felelőségek:
    * Scrum masters:
