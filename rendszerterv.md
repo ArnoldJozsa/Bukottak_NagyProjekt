@@ -33,6 +33,11 @@
 ### 3.1 Üzleti szereplők
 A rendszer fő szereplői az adminisztrátor és az alkalmazottak. Az adminisztrátor feladata az alkalmazottak hozzáférésének szabályozása és az üzleti folyamatok irányítása, míg az alkalmazottak a napi rendelés- és készletkezelést végzik.
 ### 3.2 Üzleti folyamatok
+-Rendelés kezelése: Az alkalmazottak rögzítik az új rendeléseket a rendszerben, biztosítva a pontos nyilvántartást és a gyors feldolgozást.
+
+-Készletkezelés: A készlet szintjét folyamatosan figyelik, és alacsony készlet esetén rendeléseket indítanak a hiányzó alapanyagok pótlására, ezáltal elkerülve a készlethiányokat.
+
+-Értékesítési jelentés: Az adminisztrátor rendszeresen jelentéseket készít a rendszerből, amelyek támogatják a vállalkozás teljesítményének elemzését és segítik az üzleti döntések meghozatalát.
 
 ## 4. Követelmények
 Webes és desktop környezetre is kifejlesztett megoldás.
