@@ -1,7 +1,15 @@
 # Funkcionális specifikáció
-## 1. Jelenlegi helyzet leírása
+## 1. Áttekintés
+A Cafe Shop Management System egy olyan asztali alkalmazás, amely lehetővé teszi
+kávézók és éttermek számára az értékesítési folyamatok egyszerűsítését, a rendelés
+kezelését és a számlázást. Az alkalmazás célja, hogy a kávézók mindennapi adminisztratív
+feladatait gyorsan és hatékonyan végezze el, felhasználóbarát felületen, könnyű
+kezelhetőséggel. A rendszer a Java Swing könyvtárra épül, amely grafikus felhasználói
+felületet biztosít, és lehetővé teszi az egyszerű adathozzáférést, az adminisztrációs
+feladatokat és a kávézó teljes körű működésének támogatását.
+
+## 2. Jelenlegi helyzet leírása
 A legtöbb kávézó és kis vendéglátóhely gyakran manuálisan, papíralapú nyilvántartásokon vagy egyszerű digitális eszközökön végzi a rendelésfelvételt és számlázást, amely időigényes és pontatlan lehet. A megrendelő egy könnyen kezelhető, minden alapvető funkciót biztosító asztali alkalmazást igényel, amely a rendelési folyamatokat és a fizetések adminisztrálását támogatja.
-## 2. Vágyálomrendszer leírása
 
 ## 3. Jelenlegi üzleti folyamatok modellje
 
