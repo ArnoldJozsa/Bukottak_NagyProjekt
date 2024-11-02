@@ -27,7 +27,12 @@ A jelenlegi üzleti folyamatok többnyire manuálisak, papíralapú rendelésfel
  - Felhasználói hozzáférés: A rendszer biztosítja a felhasználók számára a napi bevételek összegzését, de nem gyűjt személyes adatokat, így teljes mértékben           adatvédelmi szempontból biztonságos.
 
 ## 7. Igényelt üzleti folyamatok modellje
-
+Az alkalmazásnak egyszerűen kezelhetőnek kell lennie, és lehetőséget kell biztosítania a
+személyzet számára a rendelések, termékek és árak könnyű kezelésére, anélkül, hogy
+ehhez külön számítógépes képzésre lenne szükség. A rendszer egyszerű rendeléskezelést,
+gyors számlázást, valamint termékárak és mennyiségek frissítését biztosítja. A napi
+összesítési funkció segítségével a személyzet könnyen nyomon követheti a bevételeket és a
+napi teljesítményt.
 ## 8. Követelménylista
 
 | Id | Modul | Név | Leírás |
