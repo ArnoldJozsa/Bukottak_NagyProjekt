@@ -26,13 +26,14 @@ A Cafe Shop Management System az alábbi alapelveket követi:
       alkalmazkodva a különféle vendéglátóhelyek igényeihez.
 
 ## 5. Követelménylista
-A Cafe Shop Management System az alábbi alapelveket követi:
-Egyszerű használat: Az alkalmazás grafikus felhasználói felülete egyszerű
-kezelhetőséget biztosít a rendelésfelvétel, számlázás és adminisztráció során.
-Gyors működés: Az alkalmazás lehetővé teszi, hogy a rendeléseket gyorsan
-rögzítsék és feldolgozzák, csökkentve a várakozási időt.
-Pontosság és adatvédelem: A rendelési adatok biztonságosan tárolódnak, és a
-számlázás automatikusan történik, minimalizálva az emberi hibák lehetőségét.
+Rendelés rögzítése és kezelése: A rendszer lehetőséget biztosít az ügyfelek
+rendeléseinek gyors felvételére és módosítására.
+Tételek kezelése: A rendszer képes különféle kávé és egyéb tételek, termékek
+kezelésére.
+Árképzés és számlázás: Automatikusan kiszámítja a rendelés végösszegét,
+hozzáadva az adókat és kedvezményeket.
+Felhasználóbarát felület: A rendszer intuitív, egyszerű navigációt biztosít a
+felhasználó számára.
 
 Skálázhatóság: A rendszer új tételekkel és funkciókkal bővíthető, igény szerint
 alkalmazkodva a különféle vendéglátóhelyek igényeihez.
