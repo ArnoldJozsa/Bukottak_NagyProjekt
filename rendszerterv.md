@@ -1,5 +1,7 @@
 # Rendszerterv
 ## 1. A rendszer célja
+A CafeShopManagementSystem célja, hogy egy áttekinthető, könnyen kezelhető és platformfüggetlen eszközt biztosítson a kávézó menedzsment számára, amely segíti a mindennapi folyamatokat, mint például a rendelések nyomon követése, a készletkezelés, valamint az értékesítési adatok naprakész követése. A rendszer felhasználói szerepekre épül (adminisztrátor és alkalmazott), így mindenki a saját szerepkörének megfelelően fér hozzá a funkciókhoz.
+
 
 ## 2. Projekt terv
 A projekt fejlesztése HTML, CSS, JavaScript, Java Swing és MySQL adatbázis segítségével történik.
