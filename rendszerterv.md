@@ -146,6 +146,8 @@ A rendszer futtatásához telepíteni kell a Java környezetet, valamint szüks�
 adatbázis-kapcsolat a MySQL kiszolgálóhoz.
 
 ## 13. Karbantartási terv
+A jövőben a rendszer bővítése és frissítése is lehetőséget kap. Új funkciók hozzáadása, például a készlet-figyelmeztetések automatizálása, vagy további adminisztratív eszközök integrálása.
+
 
 Fontos ellenőrizni:
 ...
