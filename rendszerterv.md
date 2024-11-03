@@ -73,6 +73,9 @@ Megszakításmentes működés és folyamatos adatkapcsolat az adatbázissal.
 ### Támogatott eszközök
 
 ## 5. Funkcionális terv
+Felhasználói szerepkörök:
+Adminisztrátor: jogosultsága van az alkalmazottak hozzáférésének kezelésére, valamint a rendszeradatok és jelentések kezelésére.
+Alkalmazott: új rendeléseket rögzíthet, kezelheti a készletinformációkat és ellenőrizheti az aktuális rendelések állapotát.
 
 ### 5.1 Rendszerszereplők
 
