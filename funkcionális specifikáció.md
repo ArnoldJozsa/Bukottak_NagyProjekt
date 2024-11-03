@@ -59,6 +59,12 @@ téve az új rendelés rögzítését, módosítását és törlését.
 4. Napi adminisztráció: A rendszer automatikusan összegzi a napi rendeléseket és
    bevételt, ezzel segítve az üzleti folyamatok nyomon követését.
 ## 8. Képernyőtervek
+A rendszer rendelkezik:
+Főképernyővel, ahol a rendelés felvételére és a termékek kezelésére szolgáló gombok találhatók.
+Rendelés részletező oldallal, amely lehetővé teszi az új rendelés hozzáadását, a termék kiválasztását és a darabszám megadását.
+Számla és nyomtatás oldal: A véglegesített rendelésnél jeleníti meg a végösszeget, és biztosítja a nyomtatási funkciót.
+Adminisztrációs felülettel: A termékek és árak kezelésére szolgál, lehetővé téve új termékek hozzáadását és az árak frissítését.
+
 
 ![képnév](gitlink ahol a kép van)
 
