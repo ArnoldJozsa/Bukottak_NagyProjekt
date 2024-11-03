@@ -12,6 +12,8 @@ feladatokat és a kávézó teljes körű működésének támogatását.
 A legtöbb kávézó és kis vendéglátóhely gyakran manuálisan, papíralapú nyilvántartásokon vagy egyszerű digitális eszközökön végzi a rendelésfelvételt és számlázást, amely időigényes és pontatlan lehet. A megrendelő egy könnyen kezelhető, minden alapvető funkciót biztosító asztali alkalmazást igényel, amely a rendelési folyamatokat és a fizetések adminisztrálását támogatja.
 
 ## 3. Jelenlegi üzleti folyamatok modellje
+A kávézók ügyintézése papíralapú vagy egyszerű táblázatokban zajlik, amely hibalehetőségekkel és lassú működéssel jár. Ez a projekt egyszerűsíti és felgyorsítja az adminisztrációs folyamatokat, csökkentve az emberi hibák lehetőségét és növelve az ügyfélélményt.
+
 
 ## 4. Igényelt üzleti folyamatok modellje
 A Cafe Shop Management System az alábbi alapelveket követi:
