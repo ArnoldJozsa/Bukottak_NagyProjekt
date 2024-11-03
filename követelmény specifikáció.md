@@ -17,6 +17,12 @@ legyen a termékek hozzáadása és árazása, valamint hogy egy egyszerű, de �
 összesítést biztosítson az értékesítésekről és bevételekről.
 
 ## 4. Funkcionális követelmények
+Az alkalmazás egy egyszerű asztali környezetben fut, amely Java alapú, és a következő fő funkciókkal rendelkezik:
+Rendelések felvétele és módosítása: Lehetőséget biztosít új rendelés rögzítésére, a meglévő rendelés módosítására, valamint a termékek kiválasztására és darabszám megadására.
+Számlázási funkció: Automatikusan kiszámítja a rendelés teljes összegét, és lehetőséget biztosít a számla nyomtatására.
+Termékek kezelése: A termékek árát és elérhetőségét a személyzet egyszerűen frissítheti vagy módosíthatja az adminisztrációs felületen.
+Napi összesítés: Összegzi a napi eladásokat és bevételeket, amely támogatja az adminisztratív folyamatokat és nyomon követi a napi teljesítményt.
+
 
 ## 5. Jelenlegi üzleti folyamatok modellje
 A jelenlegi üzleti folyamatok többnyire manuálisak, papíralapú rendelésfelvétellel, amely időigényes és hajlamos a hibákra. A kávézók nagy része nehezen követi nyomon a napi bevételeket, és nincs megfelelő rendszer a termékek árainak gyors módosítására vagy a rendelési adatok összegzésére.
