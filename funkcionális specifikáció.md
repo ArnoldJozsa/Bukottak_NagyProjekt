@@ -86,8 +86,11 @@ Szereplők:
 ## 10. Funkció - követelmény megfeleltetése
 
 Az alkalmazás biztosítja az összes alapvető követelményt:
+
 •	Rendelés és termékek kezelése: A termékek könnyű kezelése, hozzáadásuk és módosításuk.
+
 •	Számlázás és nyomtatás: A rendszer automatikusan kiszámítja a végösszeget, és lehetővé teszi a nyomtatást.
+
 •	Adminisztráció és összegzés: Az alkalmazás napi szinten összegzi a rendeléseket, és nyomon követi a bevételeket
 
 | Id | Követelmény | Funkció |
