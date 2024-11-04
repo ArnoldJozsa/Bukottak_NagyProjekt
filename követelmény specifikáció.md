@@ -52,6 +52,8 @@ Napi összegzési funkció, amely lehetővé teszi a napi bevételek és eladás
 | K1 | ... | ... | ... |
 
 ## 9. Fogalomtár
-•	Rendelés: Az ügyfél által kiválasztott termékek egy tranzakcióhoz kapcsolódó listája.
+•	Rendelés: Az ügyfél által kiválasztott termékek egy tranzakcióhoz kapcsolódó listája.ű
+
 •	Számla: A rendelés végösszegét tartalmazó dokumentum, amely az ügyfél számára átadható.
+
 •	Adminisztráció: A termékek és árak kezelése, valamint a bevételek nyomon követése.
