@@ -100,7 +100,7 @@ A rendszer fejlesztése HTML, CSS, JavaScript, Java Swing és MySQL technológi�
 
 ## 8. Architekturális terv
 A rendszerhez szükséges egy webböngésző vagy egy asztali környezet, amely támogatja a
-Java Swing futtatását. A Java és MySQL biztosítja a kliens és az adatbázis közötti
+Java FX futtatását. A Java és MySQL biztosítja a kliens és az adatbázis közötti
 kommunikációt, így az adatokat közvetlenül a háttérrendszerbe továbbítja.
 
 ### Webszerver nem szükséges hozzá.
