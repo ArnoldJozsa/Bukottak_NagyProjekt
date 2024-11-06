@@ -1,7 +1,7 @@
 # Követelmény specifikáció
 
 ## 1. Áttekintés
-A projekt célja egy ingyenesen elérhető, könnyen használható asztali alkalmazás fejlesztése, amely támogatja a kávézók személyzetét a rendeléskezelés, számlázás és adminisztratív teendők hatékonyabb ellátásában. Az alkalmazás Java Swing keretrendszerre épül, amely biztosítja az egyszerű, átlátható felhasználói felületet és a gördülékeny működést. A szoftver célja a kávézók napi működésének felgyorsítása és leegyszerűsítése, különös figyelmet fordítva a könnyű használatra és az átláthatóságra.
+A projekt célja egy ingyenesen elérhető, könnyen használható asztali alkalmazás fejlesztése, amely támogatja a kávézók személyzetét a rendeléskezelés, számlázás és adminisztratív teendők hatékonyabb ellátásában. Az alkalmazás JavaFX keretrendszerre épül, amely biztosítja az egyszerű, átlátható felhasználói felületet és a gördülékeny működést. A szoftver célja a kávézók napi működésének felgyorsítása és leegyszerűsítése, különös figyelmet fordítva a könnyű használatra és az átláthatóságra.
 
 ## 2. A jelenlegi helyzet leírása
 Számos kávézó még mindig manuálisan, papíralapú nyilvántartásokkal vagy egyszerű táblázatokkal kezeli a rendeléseket és számlázást. Ezek a módszerek időigényesek, gyakran hibalehetőségekkel járnak, és nem támogatják a gyorsan növekvő igényeket. Ez a projekt célja, hogy egy modern, könnyen használható, asztali megoldást biztosítson, amely gyors rendeléskezelést, automatizált számlázást és egyszerű adminisztrációt kínál.
