@@ -4,7 +4,7 @@ A Cafe Shop Management System egy olyan asztali alkalmazás, amely lehetővé te
 kávézók és éttermek számára az értékesítési folyamatok egyszerűsítését, a rendelés
 kezelését és a számlázást. Az alkalmazás célja, hogy a kávézók mindennapi adminisztratív
 feladatait gyorsan és hatékonyan végezze el, felhasználóbarát felületen, könnyű
-kezelhetőséggel. A rendszer a Java Swing könyvtárra épül, amely grafikus felhasználói
+kezelhetőséggel. A rendszer a JavaFX könyvtárra épül, amely grafikus felhasználói
 felületet biztosít, és lehetővé teszi az egyszerű adathozzáférést, az adminisztrációs
 feladatokat és a kávézó teljes körű működésének támogatását.
 
