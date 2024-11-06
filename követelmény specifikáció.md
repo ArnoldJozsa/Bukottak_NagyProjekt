@@ -45,7 +45,7 @@ gyors számlázást, valamint termékárak és mennyiségek frissítését bizto
 napi teljesítményt.
 
 ## 8. Követelménylista
-A rendszer egyszerűen kezelhető, felhasználóbarát, Java Swing felülettel rendelkezik, amely biztosítja a következőket:
+A rendszer egyszerűen kezelhető, felhasználóbarát, JavaFX felülettel rendelkezik, amely biztosítja a következőket:
 Intuitív felület a rendelés felvételére, módosítására és törlésére.
 Számlázási funkció, amely automatikusan kiszámítja a rendelés végösszegét.
 Termékek hozzáadása és árazása, hogy a felhasználók könnyen módosíthassák az elérhető termékek listáját.
