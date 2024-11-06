@@ -98,14 +98,9 @@ Az alkalmazás biztosítja az összes alapvető követelményt:
 | K4 | ... | ... |
 
 ## 11 Fogalomszótár
-Szereplők: Felhasználó (kávézó személyzete) és a Cafe Shop Management System
-alkalmazás.
-1. A felhasználó megnyitja az alkalmazást, és új rendelést kezd.
-2. A rendelés részletező oldalon kiválasztja a rendelni kívánt termékeket, megadja a
-   darabszámot, és véglegesíti a rendelést.
-3. Az alkalmazás automatikusan kiszámítja a végösszeget, amely megjelenik a
-   számlaképernyőn.
-
-4. A felhasználó kinyomtatja a számlát, és lezárja a rendelést.
-5. Az alkalmazás nap végén összegzi a rendeléseket és bevételeket, amelyet az
-   adminisztrációs felületén jelenít meg.
+Rendelés: Az ügyfél által kiválasztott termékek egy adott tranzakcióhoz kapcsolódó
+listája.
+Számla: A rendelés végösszegét tartalmazó dokumentum, amely az ügyfél számára
+átadható.
+Adminisztráció: Az alkalmazás felületén a termékek és árak kezelése, valamint az
+összegzések nyomon követése.
