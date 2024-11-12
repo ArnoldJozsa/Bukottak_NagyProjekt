@@ -363,3 +363,91 @@ public class FXMLDocumentController implements Initializable {
 
                     si_loginForm.setVisible(true);
                     np_newPassForm.setVisible(false);
+                    np_confirmPassword.setText("");
+                    np_newPassword.setText("");
+                    fp_question.getSelectionModel().clearSelection();
+                    fp_answer.setText("");
+                    fp_username.setText("");
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            } else {
+                alert = new Alert(AlertType.ERROR);
+                alert.setTitle("Error Message");
+                alert.setHeaderText(null);
+                alert.setContentText("Not match");
+                alert.showAndWait();
+            }
+        }
+    }
+
+    public void forgotPassQuestionList() {
+
+        List<String> listQ = new ArrayList<>();
+
+        for (String data : questionList) {
+            listQ.add(data);
+        }
+
+        ObservableList listData = FXCollections.observableArrayList(listQ);
+        fp_question.setItems(listData);
+
+    }
+
+    public void backToLoginForm(){
+        si_loginForm.setVisible(true);
+        fp_questionForm.setVisible(false);
+    }
+
+    public void backToQuestionForm(){
+        fp_questionForm.setVisible(true);
+        np_newPassForm.setVisible(false);
+    }
+
+    public void switchForm(ActionEvent event) {
+
+        TranslateTransition slider = new TranslateTransition();
+
+        if (event.getSource() == side_CreateBtn) {
+            slider.setNode(side_form);
+            slider.setToX(300);
+            slider.setDuration(Duration.seconds(.5));
+
+            slider.setOnFinished((ActionEvent e) -> {
+                side_alreadyHave.setVisible(true);
+                side_CreateBtn.setVisible(false);
+
+                fp_questionForm.setVisible(false);
+                si_loginForm.setVisible(true);
+                np_newPassForm.setVisible(false);
+
+                regLquestionList();
+            });
+
+            slider.play();
+        } else if (event.getSource() == side_alreadyHave) {
+            slider.setNode(side_form);
+            slider.setToX(0);
+            slider.setDuration(Duration.seconds(.5));
+
+            slider.setOnFinished((ActionEvent e) -> {
+                side_alreadyHave.setVisible(false);
+                side_CreateBtn.setVisible(true);
+
+                fp_questionForm.setVisible(false);
+                si_loginForm.setVisible(true);
+                np_newPassForm.setVisible(false);
+            });
+
+            slider.play();
+        }
+
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        
+    }
+
+}
