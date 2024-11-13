@@ -85,3 +85,21 @@
                                 <Font name="Baskerville Old Face" size="22.0" />
                             </font>
                         </Label>
+
+                        <Button fx:id="side_CreateBtn" layoutX="43.0" layoutY="346.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="220.0" styleClass="create-btn" stylesheets="@loginDesign.css" text="Create new Account" AnchorPane.bottomAnchor="14.0">
+                            <font>
+                                <Font name="Baskerville Old Face" size="16.0" />
+                            </font></Button>
+                        <Button fx:id="side_alreadyHave" layoutX="43.0" layoutY="353.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="220.0" styleClass="create-btn" stylesheets="@loginDesign.css" text="Already have an Account" visible="false" />
+                        <FontAwesomeIcon fill="WHITE" glyphName="COFFEE" layoutX="89.0" layoutY="182.0" size="10em" text="♨" />
+                        <Label layoutX="12.0" layoutY="204.0" text="Cafe Shop Management System" textFill="WHITE">
+                            <font>
+                                <Font name="Baskerville Old Face" size="22.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
