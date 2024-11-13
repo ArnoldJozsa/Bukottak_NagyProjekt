@@ -61,3 +61,27 @@
                         </Button>
                     </children>
                 </AnchorPane>
+                <AnchorPane fx:id="np_newPassForm" layoutX="300.0" layoutY="7.0" prefHeight="400.0" prefWidth="300.0" styleClass="white-form" stylesheets="@loginDesign.css" visible="false">
+                    <children>
+                        <Label layoutX="40.0" layoutY="67.0" styleClass="head-label" stylesheets="@loginDesign.css" text="Forgot Password" textFill="#84633b">
+                            <font>
+                                <Font name="Baskerville Old Face" size="24.0" />
+                            </font>
+                        </Label>
+                        <PasswordField fx:id="np_newPassword" layoutX="40.0" layoutY="148.0" onAction="#changePassBtn" prefHeight="30.0" prefWidth="220.0" promptText="New Password" styleClass="textfield" stylesheets="@loginDesign.css" />
+                        <PasswordField fx:id="np_confirmPassword" layoutX="40.0" layoutY="185.0" onAction="#changePassBtn" prefHeight="30.0" prefWidth="220.0" promptText="Confirmation Password" styleClass="textfield" stylesheets="@loginDesign.css" />
+                        <Button fx:id="np_changePassBtn" layoutX="40.0" layoutY="228.0" mnemonicParsing="false" onAction="#changePassBtn" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="Change Password" />
+                        <Button fx:id="np_back" layoutX="116.0" layoutY="355.0" mnemonicParsing="false" onAction="#backToQuestionForm" prefHeight="30.0" prefWidth="68.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="Back">
+                            <graphic>
+                                <FontAwesomeIcon fill="WHITE" glyphName="ANGLE_LEFT" size="1.5em" />
+                            </graphic>
+                        </Button>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="side_form" prefHeight="400.0" prefWidth="300.0" styleClass="gradient" stylesheets="@loginDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label layoutX="80.0" layoutY="308.0" prefWidth="146.0" text="Create Account" textFill="WHITE">
+                            <font>
+                                <Font name="Baskerville Old Face" size="22.0" />
+                            </font>
+                        </Label>
