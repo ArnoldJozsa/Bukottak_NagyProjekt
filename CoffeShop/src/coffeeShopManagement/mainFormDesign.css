@@ -1,0 +1,26 @@
+.header{
+    -fx-background-color: linear-gradient(to bottom right, #aa7c5a, #794e3d);
+    -fx-border-color: #fff;
+    -fx-border-width: 0 0 .8px 0;
+}
+
+.nav-form{
+    -fx-background-color: linear-gradient(to bottom right, #794e3d, #653e36);
+}
+
+
+.rounded-pane {
+    -fx-background-color: linear-gradient(to bottom right, #794e3d, #653e36);
+    -fx-background-radius: 15;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0, 0);
+}
+
+.nav-btn{
+    -fx-background-color: transparent;
+    -fx-border-color: #fff;
+    -fx-border-width: .4px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+}
