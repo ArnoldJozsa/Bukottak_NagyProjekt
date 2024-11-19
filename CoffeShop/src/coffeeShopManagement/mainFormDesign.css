@@ -80,3 +80,26 @@
     -fx-text-fill: #fff;
     -fx-font-size: 14px;
 }
+
+.btn:hover{
+    -fx-background-color: linear-gradient(to bottom right, #aa7c5a, #794e3d);
+}
+
+.chart-bar {
+    -fx-bar-fill: #d6af8d;
+}
+
+.chart-color .chart-series-line {
+    -fx-stroke: rgba(170, 124, 90, 0.44); /* A vonal színe */
+    -fx-stroke-width: 2px; /* Vonal vastagsága */
+}
+
+.chart-color .default-color0.chart-series-area-fill {
+    -fx-fill: rgba(110, 77, 50, 0.46); /* Kitöltés színe áttetsző kékre */
+}
+
+.chart-color .default-color0.chart-line-symbol {
+    -fx-background-color: #aa7c5a, white; /* A külső kör színe és a belső fehér */
+    -fx-background-radius: 5px; /* Kerekítés a pontokhoz */
+    -fx-padding: 2px; /* Pont mérete */
+}
