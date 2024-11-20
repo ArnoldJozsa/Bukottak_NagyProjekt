@@ -165,3 +165,39 @@ public class cardProductController implements Initializable {
                     int upStock = checkStck - qty;
 
 
+                    System.out.println("Date: " + prod_date);
+                    System.out.println("Image: " + prod_image);
+
+                    String updateStock = "UPDATE product SET prod_name = '"
+                            + prod_name.getText() + "', type = '"
+                            + type + "', stock = " + upStock + ", price = " + pr
+                            + ", status = '"
+                            + check + "', image = '"
+                            + prod_image + "', date = '"
+                            + prod_date + "' WHERE prod_id = '"
+                            + prodID + "'";
+
+                    prepare = connect.prepareStatement(updateStock);
+                    prepare.executeUpdate();
+
+                    alert = new Alert(AlertType.INFORMATION);
+                    alert.setTitle("Information Message");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Successfully Added!");
+                    alert.showAndWait();
+
+                    mForm.menuGetTotal();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        setQuantity();
+    }
+
+}
