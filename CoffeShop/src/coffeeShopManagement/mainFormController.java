@@ -608,3 +608,308 @@ public class mainFormController implements Initializable {
     public ObservableList<productData> inventoryDataList() {
 
         ObservableList<productData> listData = FXCollections.observableArrayList();
+        String sql = "SELECT * FROM product";
+
+        connect = database.connectDB();
+
+        try {
+
+            prepare = connect.prepareStatement(sql);
+            result = prepare.executeQuery();
+
+            productData prodData;
+
+            while (result.next()) {
+
+                prodData = new productData(result.getInt("id"),
+                        result.getString("prod_id"),
+                        result.getString("prod_name"),
+                        result.getString("type"),
+                        result.getInt("stock"),
+                        result.getDouble("price"),
+                        result.getString("status"),
+                        result.getString("image"),
+                        result.getDate("date"));
+
+                listData.add(prodData);
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return listData;
+    }
+
+    // TO SHOW DATA ON OUR TABLE
+    private ObservableList<productData> inventoryListData;
+
+    public void inventoryShowData() {
+        inventoryListData = inventoryDataList();
+
+        inventory_col_productID.setCellValueFactory(new PropertyValueFactory<>("productId"));
+        inventory_col_productName.setCellValueFactory(new PropertyValueFactory<>("productName"));
+        inventory_col_type.setCellValueFactory(new PropertyValueFactory<>("type"));
+        inventory_col_stock.setCellValueFactory(new PropertyValueFactory<>("stock"));
+        inventory_col_price.setCellValueFactory(new PropertyValueFactory<>("price"));
+        inventory_col_status.setCellValueFactory(new PropertyValueFactory<>("status"));
+        inventory_col_date.setCellValueFactory(new PropertyValueFactory<>("date"));
+
+        inventory_tableView.setItems(inventoryListData);
+
+    }
+
+    public void inventorySelectData() {
+
+        productData prodData = inventory_tableView.getSelectionModel().getSelectedItem();
+        int num = inventory_tableView.getSelectionModel().getSelectedIndex();
+
+        if ((num - 1) < -1) {
+            return;
+        }
+
+        inventory_productID.setText(prodData.getProductId());
+        inventory_productName.setText(prodData.getProductName());
+        inventory_stock.setText(String.valueOf(prodData.getStock()));
+        inventory_price.setText(String.valueOf(prodData.getPrice()));
+
+        data.path = prodData.getImage();
+
+        String path = "File:" + prodData.getImage();
+        data.date = String.valueOf(prodData.getDate());
+        data.id = prodData.getId();
+
+        image = new Image(path, 120, 127, false, true);
+        inventory_imageView.setImage(image);
+    }
+
+    private String[] typeList = {"Meals", "Drinks"};
+
+    public void inventoryTypeList() {
+
+        List<String> typeL = new ArrayList<>();
+
+        for (String data : typeList) {
+            typeL.add(data);
+        }
+
+        ObservableList listData = FXCollections.observableArrayList(typeL);
+        inventory_type.setItems(listData);
+    }
+
+    private String[] statusList = {"Available", "Unavailable"};
+
+    public void inventoryStatusList() {
+
+        List<String> statusL = new ArrayList<>();
+
+        for (String data : statusList) {
+            statusL.add(data);
+        }
+
+        ObservableList listData = FXCollections.observableArrayList(statusL);
+        inventory_status.setItems(listData);
+
+    }
+
+    public ObservableList<productData> menuGetData() {
+
+        String sql = "SELECT * FROM product";
+
+        ObservableList<productData> listData = FXCollections.observableArrayList();
+        connect = database.connectDB();
+
+        try {
+            prepare = connect.prepareStatement(sql);
+            result = prepare.executeQuery();
+
+            productData prod;
+
+            while (result.next()) {
+                prod = new productData(result.getInt("id"),
+                        result.getString("prod_id"),
+                        result.getString("prod_name"),
+                        result.getString("type"),
+                        result.getInt("stock"),
+                        result.getDouble("price"),
+                        result.getString("image"),
+                        result.getDate("date"));
+
+                listData.add(prod);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return listData;
+    }
+
+    public void menuDisplayCard() {
+
+        cardListData.clear();
+        cardListData.addAll(menuGetData());
+
+        int row = 0;
+        int column = 0;
+
+        menu_gridPane.getChildren().clear();
+        menu_gridPane.getRowConstraints().clear();
+        menu_gridPane.getColumnConstraints().clear();
+
+        for (int q = 0; q < cardListData.size(); q++) {
+
+            try {
+                FXMLLoader load = new FXMLLoader();
+                load.setLocation(getClass().getResource("cardProduct.fxml"));
+                AnchorPane pane = load.load();
+                cardProductController cardC = load.getController();
+                cardC.setData(cardListData.get(q));
+
+                if (column == 3) {
+                    column = 0;
+                    row += 1;
+                }
+
+                menu_gridPane.add(pane, column++, row);
+
+                GridPane.setMargin(pane, new Insets(10));
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public ObservableList<productData> menuGetOrder() {
+        customerID();
+        ObservableList<productData> listData = FXCollections.observableArrayList();
+
+        String sql = "SELECT * FROM customer WHERE customer_id = " + cID;
+
+        connect = database.connectDB();
+
+        try {
+
+            prepare = connect.prepareStatement(sql);
+            result = prepare.executeQuery();
+
+            productData prod;
+
+            while (result.next()) {
+                prod = new productData(result.getInt("id"),
+                        result.getString("prod_id"),
+                        result.getString("prod_name"),
+                        result.getString("type"),
+                        result.getInt("quantity"),
+                        result.getDouble("price"),
+                        result.getString("image"),
+                        result.getDate("date"));
+                listData.add(prod);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return listData;
+    }
+
+    private ObservableList<productData> menuOrderListData;
+
+    public void menuShowOrderData() {
+        menuOrderListData = menuGetOrder();
+
+        menu_col_productName.setCellValueFactory(new PropertyValueFactory<>("productName"));
+        menu_col_quantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        menu_col_price.setCellValueFactory(new PropertyValueFactory<>("price"));
+
+        menu_tableView.setItems(menuOrderListData);
+    }
+    private int getid;
+
+    public void menuSelectOrder() {
+        productData prod = menu_tableView.getSelectionModel().getSelectedItem();
+        int num = menu_tableView.getSelectionModel().getSelectedIndex();
+
+        if ((num - 1) < -1) {
+            return;
+        }
+        // TO GET THE ID PER ORDER
+        getid = prod.getId();
+
+    }
+
+    private double totalP;
+
+    public void menuGetTotal() {
+        customerID();
+        String total = "SELECT SUM(price) FROM customer WHERE customer_id = " + cID;
+
+        connect = database.connectDB();
+
+        try {
+
+            prepare = connect.prepareStatement(total);
+            result = prepare.executeQuery();
+
+            if (result.next()) {
+                totalP = result.getDouble("SUM(price)");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void menuDisplayTotal() {
+        menuGetTotal();
+        menu_total.setText("$" + totalP);
+    }
+
+    private double amount;
+    private double change;
+
+    public void menuAmount() {
+        menuGetTotal();
+        if (menu_amount.getText().isEmpty() || totalP == 0) {
+            alert = new Alert(AlertType.ERROR);
+            alert.setTitle("Error Message");
+            alert.setHeaderText(null);
+            alert.setContentText("Invalid :3");
+            alert.showAndWait();
+        } else {
+            amount = Double.parseDouble(menu_amount.getText());
+            if (amount < totalP) {
+                menu_amount.setText("");
+            } else {
+                change = (amount - totalP);
+                menu_change.setText("$" + change);
+            }
+        }
+    }
+
+    public void menuPayBtn() {
+
+        if (totalP == 0) {
+            alert = new Alert(AlertType.ERROR);
+            alert.setTitle("Error Message");
+            alert.setHeaderText(null);
+            alert.setContentText("Please choose your order first!");
+            alert.showAndWait();
+        } else {
+            menuGetTotal();
+            String insertPay = "INSERT INTO receipt (customer_id, total, date, em_username) "
+                    + "VALUES(?,?,?,?)";
+
+            connect = database.connectDB();
+
+            try {
+
+                if (amount == 0) {
+                    alert = new Alert(AlertType.ERROR);
+                    alert.setTitle("Error Messaged");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Something wrong :3");
+                    alert.showAndWait();
