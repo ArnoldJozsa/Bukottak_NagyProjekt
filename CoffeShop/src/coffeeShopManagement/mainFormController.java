@@ -913,3 +913,307 @@ public class mainFormController implements Initializable {
                     alert.setHeaderText(null);
                     alert.setContentText("Something wrong :3");
                     alert.showAndWait();
+
+                } else {
+                    alert = new Alert(AlertType.CONFIRMATION);
+                    alert.setTitle("Confirmation Message");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Are you sure?");
+                    Optional<ButtonType> option = alert.showAndWait();
+
+                    if (option.get().equals(ButtonType.OK)) {
+                        customerID();
+                        menuGetTotal();
+                        prepare = connect.prepareStatement(insertPay);
+                        prepare.setString(1, String.valueOf(cID));
+                        prepare.setString(2, String.valueOf(totalP));
+
+                        Date date = new Date();
+                        java.sql.Date sqlDate = new java.sql.Date(date.getTime());
+
+                        prepare.setString(3, String.valueOf(sqlDate));
+                        prepare.setString(4, data.username);
+
+                        prepare.executeUpdate();
+
+                        alert = new Alert(AlertType.INFORMATION);
+                        alert.setTitle("Infomation Message");
+                        alert.setHeaderText(null);
+                        alert.setContentText("Successful.");
+                        alert.showAndWait();
+
+                        menuShowOrderData();
+
+                    } else {
+                        alert = new Alert(AlertType.WARNING);
+                        alert.setTitle("Infomation Message");
+                        alert.setHeaderText(null);
+                        alert.setContentText("Cancelled.");
+                        alert.showAndWait();
+                    }
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+    public void menuRemoveBtn() {
+
+        if (getid == 0) {
+            alert = new Alert(AlertType.ERROR);
+            alert.setTitle("Error Message");
+            alert.setHeaderText(null);
+            alert.setContentText("Please select the order you want to remove");
+            alert.showAndWait();
+        } else {
+            String deleteData = "DELETE FROM customer WHERE id = " + getid;
+            connect = database.connectDB();
+            try {
+                alert = new Alert(AlertType.CONFIRMATION);
+                alert.setTitle("Confirmation Message");
+                alert.setHeaderText(null);
+                alert.setContentText("Are you sure you want to delete this order?");
+                Optional<ButtonType> option = alert.showAndWait();
+
+                if (option.get().equals(ButtonType.OK)) {
+                    prepare = connect.prepareStatement(deleteData);
+                    prepare.executeUpdate();
+                }
+
+                menuShowOrderData();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+    }
+
+    public void menuReceiptBtn() {
+
+        if (totalP == 0 || menu_amount.getText().isEmpty()) {
+            alert = new Alert(AlertType.ERROR);
+            alert.setTitle("Error Message");
+            alert.setContentText("Please order first");
+            alert.showAndWait();
+        } else {
+            HashMap map = new HashMap();
+            map.put("getReceipt", (cID - 1));
+
+            try {
+
+                JasperDesign jDesign = JRXmlLoader.load("C:\\Users\\WINDOWS 10\\Documents\\NetBeansProjects\\cafeShopManagementSystem\\src\\cafeshopmanagementsystem\\report.jrxml");
+                JasperReport jReport = JasperCompileManager.compileReport(jDesign);
+                JasperPrint jPrint = JasperFillManager.fillReport(jReport, map, connect);
+
+                JasperViewer.viewReport(jPrint, false);
+
+                menuRestart();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+
+    }
+
+    public void menuRestart() {
+        totalP = 0;
+        change = 0;
+        amount = 0;
+        menu_total.setText("$0.0");
+        menu_amount.setText("");
+        menu_change.setText("$0.0");
+    }
+
+    private int cID;
+
+    public void customerID() {
+
+        String sql = "SELECT MAX(customer_id) FROM customer";
+        connect = database.connectDB();
+
+        try {
+            prepare = connect.prepareStatement(sql);
+            result = prepare.executeQuery();
+
+            if (result.next()) {
+                cID = result.getInt("MAX(customer_id)");
+            }
+
+            String checkCID = "SELECT MAX(customer_id) FROM receipt";
+            prepare = connect.prepareStatement(checkCID);
+            result = prepare.executeQuery();
+            int checkID = 0;
+            if (result.next()) {
+                checkID = result.getInt("MAX(customer_id)");
+            }
+
+            if (cID == 0) {
+                cID += 1;
+            } else if (cID == checkID) {
+                cID += 1;
+            }
+
+            data.cID = cID;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public ObservableList<customersData> customersDataList() {
+
+        ObservableList<customersData> listData = FXCollections.observableArrayList();
+        String sql = "SELECT * FROM receipt";
+        connect = database.connectDB();
+
+        try {
+
+            prepare = connect.prepareStatement(sql);
+            result = prepare.executeQuery();
+            customersData cData;
+
+            while (result.next()) {
+                cData = new customersData(result.getInt("id"),
+                        result.getInt("customer_id"),
+                        result.getDouble("total"),
+                        result.getDate("date"),
+                        result.getString("em_username"));
+
+                listData.add(cData);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return listData;
+    }
+
+    private ObservableList<customersData> customersListData;
+
+    public void customersShowData() {
+        customersListData = customersDataList();
+
+        customers_col_customerID.setCellValueFactory(new PropertyValueFactory<>("customerID"));
+        customers_col_total.setCellValueFactory(new PropertyValueFactory<>("total"));
+        customers_col_date.setCellValueFactory(new PropertyValueFactory<>("date"));
+        customers_col_cashier.setCellValueFactory(new PropertyValueFactory<>("emUsername"));
+
+        customers_tableView.setItems(customersListData);
+    }
+
+    public void switchForm(ActionEvent event) {
+
+        if (event.getSource() == dashboard_btn) {
+            dashboard_form.setVisible(true);
+            inventory_form.setVisible(false);
+            menu_form.setVisible(false);
+            customers_form.setVisible(false);
+
+            dashboardDisplayNC();
+            dashboardDisplayTI();
+            dashboardTotalI();
+            dashboardNSP();
+            dashboardIncomeChart();
+            dashboardCustomerChart();
+
+        } else if (event.getSource() == inventory_btn) {
+            dashboard_form.setVisible(false);
+            inventory_form.setVisible(true);
+            menu_form.setVisible(false);
+            customers_form.setVisible(false);
+
+            inventoryTypeList();
+            inventoryStatusList();
+            inventoryShowData();
+        } else if (event.getSource() == menu_btn) {
+            dashboard_form.setVisible(false);
+            inventory_form.setVisible(false);
+            menu_form.setVisible(true);
+            customers_form.setVisible(false);
+
+            menuDisplayCard();
+            menuDisplayTotal();
+            menuShowOrderData();
+        } else if (event.getSource() == customers_btn) {
+            dashboard_form.setVisible(false);
+            inventory_form.setVisible(false);
+            menu_form.setVisible(false);
+            customers_form.setVisible(true);
+
+            customersShowData();
+        }
+
+    }
+
+    public void logout() {
+
+        try {
+
+            alert = new Alert(AlertType.CONFIRMATION);
+            alert.setTitle("Error Message");
+            alert.setHeaderText(null);
+            alert.setContentText("Are you sure you want to logout?");
+            Optional<ButtonType> option = alert.showAndWait();
+
+            if (option.get().equals(ButtonType.OK)) {
+
+                // TO HIDE MAIN FORM
+                logout_btn.getScene().getWindow().hide();
+
+                // LINK YOUR LOGIN FORM AND SHOW IT
+                Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+
+                Stage stage = new Stage();
+                Scene scene = new Scene(root);
+
+                stage.setTitle("Cafe Shop Management System");
+
+                stage.setScene(scene);
+                stage.show();
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void displayUsername() {
+
+        String user = data.username;
+        user = user.substring(0, 1).toUpperCase() + user.substring(1);
+
+        username.setText(user);
+
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+        displayUsername();
+
+        dashboardDisplayNC();
+        dashboardDisplayTI();
+        dashboardTotalI();
+        dashboardNSP();
+        dashboardIncomeChart();
+        dashboardCustomerChart();
+
+        inventoryTypeList();
+        inventoryStatusList();
+        inventoryShowData();
+
+        menuDisplayCard();
+        menuGetOrder();
+        menuDisplayTotal();
+        menuShowOrderData();
+
+        customersShowData();
+    }
+}
