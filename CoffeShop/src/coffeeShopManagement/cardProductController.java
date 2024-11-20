@@ -54,3 +54,66 @@ public class cardProductController implements Initializable {
     private ResultSet result;
 
     private Alert alert;
+    public void setData(productData prodData) {
+        this.prodData = prodData;
+
+        prod_image = prodData.getImage();
+        prod_date = String.valueOf(prodData.getDate());
+        type = prodData.getType();
+        prodID = prodData.getProductId();
+        prod_name.setText(prodData.getProductName());
+        prod_price.setText("$" + String.valueOf(prodData.getPrice()));
+        String path = "File:" + prodData.getImage();
+        image = new Image(path, 190, 94, false, true);
+        prod_imageView.setImage(image);
+        pr = prodData.getPrice();
+
+    }
+    private int qty;
+
+    public void setQuantity() {
+        spin = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0);
+        prod_spinner.setValueFactory(spin);
+    }
+
+    private double totalP;
+    private double pr;
+
+    public void addBtn() {
+
+        mainFormController mForm = new mainFormController();
+        mForm.customerID();
+
+        qty = prod_spinner.getValue();
+        String check = "";
+        String checkAvailable = "SELECT status FROM product WHERE prod_id = '"
+                + prodID + "'";
+
+        connect = database.connectDB();
+
+        try {
+            int checkStck = 0;
+            String checkStock = "SELECT stock FROM product WHERE prod_id = '"
+                    + prodID + "'";
+
+            prepare = connect.prepareStatement(checkStock);
+            result = prepare.executeQuery();
+
+            if (result.next()) {
+                checkStck = result.getInt("stock");
+            }
+
+            if(checkStck == 0){
+
+                String updateStock = "UPDATE product SET prod_name = '"
+                        + prod_name.getText() + "', type = '"
+                        + type + "', stock = 0, price = " + pr
+                        + ", status = 'Unavailable', image = '"
+                        + prod_image + "', date = '"
+                        + prod_date + "' WHERE prod_id = '"
+                        + prodID + "'";
+                prepare = connect.prepareStatement(updateStock);
+                prepare.executeUpdate();
+
+            }
+
