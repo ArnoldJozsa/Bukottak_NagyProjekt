@@ -116,4 +116,52 @@ public class cardProductController implements Initializable {
                 prepare.executeUpdate();
 
             }
+            prepare = connect.prepareStatement(checkAvailable);
+            result = prepare.executeQuery();
+
+            if (result.next()) {
+                check = result.getString("status");
+            }
+
+            if (!check.equals("Available") || qty == 0) {
+                alert = new Alert(AlertType.ERROR);
+                alert.setTitle("Error Message");
+                alert.setHeaderText(null);
+                alert.setContentText("Something Wrong :3");
+                alert.showAndWait();
+            } else {
+
+                if (checkStck < qty) {
+                    alert = new Alert(AlertType.ERROR);
+                    alert.setTitle("Error Message");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Invalid. This product is Out of stock");
+                    alert.showAndWait();
+                } else {
+                    prod_image = prod_image.replace("\\", "\\\\");
+
+                    String insertData = "INSERT INTO customer "
+                            + "(customer_id, prod_id, prod_name, type, quantity, price, date, image, em_username) "
+                            + "VALUES(?,?,?,?,?,?,?,?,?)";
+                    prepare = connect.prepareStatement(insertData);
+                    prepare.setString(1, String.valueOf(data.cID));
+                    prepare.setString(2, prodID);
+                    prepare.setString(3, prod_name.getText());
+                    prepare.setString(4, type);
+                    prepare.setString(5, String.valueOf(qty));
+
+                    totalP = (qty * pr);
+                    prepare.setString(6, String.valueOf(totalP));
+
+                    Date date = new Date();
+                    java.sql.Date sqlDate = new java.sql.Date(date.getTime());
+                    prepare.setString(7, String.valueOf(sqlDate));
+
+                    prepare.setString(8, prod_image);
+                    prepare.setString(9, data.username);
+
+                    prepare.executeUpdate();
+
+                    int upStock = checkStck - qty;
+
 
