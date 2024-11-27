@@ -1,4 +1,4 @@
-module org.example.coffeshop {
+module coffeeShopManagement {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -6,7 +6,11 @@ module org.example.coffeshop {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
     requires com.almasb.fxgl.all;
+    requires de.jensd.fx.glyphs.fontawesome; 
 
-    opens org.example.coffeshop to javafx.fxml;
-    exports org.example.coffeshop;
+
+    opens coffeeShopManagement to javafx.fxml;
+
+
+    exports coffeeShopManagement;
 }
