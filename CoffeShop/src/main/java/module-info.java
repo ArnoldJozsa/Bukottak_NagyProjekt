@@ -6,7 +6,7 @@ module coffeeShopManagement {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
     requires com.almasb.fxgl.all;
-    requires de.jensd.fx.glyphs.fontawesome; 
+    //requires de.jensd.fx.glyphs.fontawesome;
 
 
     opens coffeeShopManagement to javafx.fxml;
