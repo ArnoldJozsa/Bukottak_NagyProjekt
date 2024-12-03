@@ -123,7 +123,7 @@ public class FXMLDocumentController implements Initializable {
             alert.showAndWait();
         } else {
 
-            String selctData = "SELECT username, password FROM employee WHERE username = ? and password = ?";
+            String selctData = "SELECT username, password FROM employees WHERE username = ? and password = ?";
 
             connect = database.connectDB();
             try {
@@ -187,16 +187,29 @@ public class FXMLDocumentController implements Initializable {
             alert.showAndWait();
         } else {
 
-            String regData = "INSERT INTO employee (username, password, question, answer, date) "
+            String regData = "INSERT INTO employees (username, password, question, answer, date) "
                     + "VALUES(?,?,?,?,?)";
             connect = database.connectDB();
+            if (connect == null) {
+                alert = new Alert(AlertType.ERROR);
+                alert.setTitle("Database Error");
+                alert.setHeaderText(null);
+                alert.setContentText("Failed to connect to the database.");
+                alert.showAndWait();
+                return;
+            }
 
             try {
 
-                String checkUsername = "SELECT username FROM employee WHERE username = '"
-                        + su_username.getText() + "'";
+                //String checkUsername = "SELECT username FROM employees WHERE username = '"
+                  //      + su_username.getText() + "'";
 
+                //prepare = connect.prepareStatement(checkUsername);
+                //result = prepare.executeQuery();
+
+                String checkUsername = "SELECT username FROM employees WHERE username = ?";
                 prepare = connect.prepareStatement(checkUsername);
+                prepare.setString(1, su_username.getText());
                 result = prepare.executeQuery();
 
                 if (result.next()) {
@@ -288,7 +301,7 @@ public class FXMLDocumentController implements Initializable {
 
         } else {
 
-            String selectData = "SELECT username, question, answer FROM employee WHERE username = ? AND question = ? AND answer = ?";
+            String selectData = "SELECT username, question, answer FROM employees WHERE username = ? AND question = ? AND answer = ?";
             connect = database.connectDB();
 
             try {
@@ -330,7 +343,7 @@ public class FXMLDocumentController implements Initializable {
         } else {
 
             if (np_newPassword.getText().equals(np_confirmPassword.getText())) {
-                String getDate = "SELECT date FROM employee WHERE username = '"
+                String getDate = "SELECT date FROM employees WHERE username = '"
                         + fp_username.getText() + "'";
 
                 connect = database.connectDB();
@@ -345,7 +358,7 @@ public class FXMLDocumentController implements Initializable {
                         date = result.getString("date");
                     }
 
-                    String updatePass = "UPDATE employee SET password = '"
+                    String updatePass = "UPDATE employees SET password = '"
                             + np_newPassword.getText() + "', question = '"
                             + fp_question.getSelectionModel().getSelectedItem() + "', answer = '"
                             + fp_answer.getText() + "', date = '"

@@ -1,0 +1,105 @@
+.header{
+    -fx-background-color: linear-gradient(to bottom right, #aa7c5a, #794e3d);
+    -fx-border-color: #fff;
+    -fx-border-width: 0 0 .8px 0;
+}
+
+.nav-form{
+    -fx-background-color: linear-gradient(to bottom right, #794e3d, #653e36);
+}
+
+
+.rounded-pane {
+    -fx-background-color: linear-gradient(to bottom right, #794e3d, #653e36);
+    -fx-background-radius: 15;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0, 0);
+}
+
+.nav-btn{
+    -fx-background-color: transparent;
+    -fx-border-color: #fff;
+    -fx-border-width: .4px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+}
+.nav-btn:hover{
+    -fx-background-color: #fff;
+    -fx-text-fill: #000;
+}
+
+.logout{
+    -fx-background-color: #aa7c5a;
+    -fx-padding: 5px;
+    -fx-cursor: hand;
+    -fx-background-radius: 50px;
+}
+.logout:hover{
+    -fx-background-color: #3e2e21;
+}
+
+.shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 5,0,0,0);
+}
+
+.white-bg{
+    -fx-background-color: #fff;
+}
+
+.radius{
+    -fx-background-radius: 8px;
+}
+.transparent{
+    -fx-background-color: transparent;
+}
+
+.table-view{
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-border-color: linear-gradient(to bottom right, #794e3d, #653e36);
+    -fx-border-radius: 5px;
+    -fx-border-width: 1.5px;
+}
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom right, #794e3d, #653e36);
+    -fx-background-radius: 5px 5px 0 0;
+    -fx-background-insets: 0 0 0 0;
+}
+.table-view .column-header, .filter{
+    -fx-background-color: transparent;
+    -fx-size: 40px;
+}
+.table-view .column-header .label{
+    -fx-text-fill: #fff;
+}
+
+.btn{
+    -fx-background-color: linear-gradient(to bottom right, #aa7c5a, #794e3d);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+}
+
+.btn:hover{
+    -fx-background-color: linear-gradient(to bottom right, #aa7c5a, #794e3d);
+}
+
+.chart-bar {
+    -fx-bar-fill: #d6af8d;
+}
+
+.chart-color .chart-series-line {
+    -fx-stroke: rgba(170, 124, 90, 0.44); /* A vonal színe */
+    -fx-stroke-width: 2px; /* Vonal vastagsága */
+}
+
+.chart-color .default-color0.chart-series-area-fill {
+    -fx-fill: rgba(110, 77, 50, 0.46); /* Kitöltés színe áttetsző kékre */
+}
+
+.chart-color .default-color0.chart-line-symbol {
+    -fx-background-color: #aa7c5a, white; /* A külső kör színe és a belső fehér */
+    -fx-background-radius: 5px; /* Kerekítés a pontokhoz */
+    -fx-padding: 2px; /* Pont mérete */
+}

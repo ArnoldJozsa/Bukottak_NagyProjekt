@@ -10,11 +10,18 @@ public class database {
 
         try {
 
-            Class.forName("com.mysql.jdbc.Driver");
+            //Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
-            Connection connect = DriverManager.getConnection("jdbc:mysql://localhost/cafe", "root", "");
+            String url = "jdbc:mysql://localhost:3306/cafe_management?useSSL=false&serverTimezone=UTC";
+
+
+            Connection connect = DriverManager.getConnection(url, "root", "");
+
+            //Connection connect = DriverManager.getConnection("jdbc:mysql://localhost/cafe_management", "root", "");
             return connect;
         } catch (Exception e) {
+            System.err.println("Database connection failed: " + e.getMessage());
             e.printStackTrace();
         }
         return null;
