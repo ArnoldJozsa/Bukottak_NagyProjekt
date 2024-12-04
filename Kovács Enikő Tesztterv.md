@@ -9,7 +9,7 @@ Ebben a dokumentumban lesz felsorolva az elvégzett tesztek elvárásai és ered
 
 | Vizsgálat | Tesztelés időpontja | Elvárás | Eredmény | Hibák |
 | :-: | --- | --- | --- | --- |
-| Regisztráció | 2022.11.06. | A felhasználó sikeresen regisztráljon. | Nem sikerült regisztrálni. | Hibaüzenet jelenik meg mentésnél. |
+| Regisztráció | 2024.11.06. | A felhasználó sikeresen regisztráljon. | Nem sikerült regisztrálni. | Hibaüzenet jelenik meg mentésnél. |
 
 Az Alfa tesztelés során a vizsgált elemek mind hibátlanul működtek mindenféle fennakadások nélkül.
 Az Alfa tesztelés során a vizsgált elemek között volt ami nem megfelelően működött, ez a későbbiek során javításra szorul.
