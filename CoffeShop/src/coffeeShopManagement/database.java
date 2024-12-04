@@ -13,7 +13,7 @@ public class database {
             //Class.forName("com.mysql.jdbc.Driver");
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            String url = "jdbc:mysql://localhost:3306/cafe_management?useSSL=false&serverTimezone=UTC";
+            String url = "jdbc:mysql://localhost:3306/cafe?useSSL=false&serverTimezone=UTC";
 
 
             Connection connect = DriverManager.getConnection(url, "root", "");

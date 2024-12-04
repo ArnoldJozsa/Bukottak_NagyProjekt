@@ -1,7 +1,7 @@
 Tesztjegyzőkönyv
 Teszteléseket végezte: Józsa Arnold
 
-Operációs rendszer: Win100
+Operációs rendszer: Win11
 
 Ebben a dokumentumban lesz felsorolva az elvégzett tesztek elvárásai és eredményei, illetve időpontjai (Alfa, Béta és Végleges verzió).
 Alfa teszt
