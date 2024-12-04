@@ -8,6 +8,7 @@ Ebben a dokumentumban lesz felsorolva az elvégzett tesztek elvárásai és ered
 ## Alfa teszt
 
 | Vizsgálat | Tesztelés időpontja | Elvárás | Eredmény | Hibák |
+| :-: | --- | --- | --- | --- |
 | Regisztráció | 2024.11.06. | A felhasználó sikeresen regisztráljon. | Nem sikerült regisztrálni. | Hibaüzenet jelenik meg mentésnél. |
 | Bejelentkezés.(login) | 2024.11.08. |Bejelentkezés sikeresen működjön. | Bejelentkezés sikertelen. | Érvényes adatokkal
 sem működik. |
@@ -22,6 +23,7 @@ Következő tesztelésnél a többi funkció kerül vizsgálatra illetve elemzé
 ## Béta teszt
 
 | Vizsgálat | Tesztelés időpontja | Elvárás | Eredmény | Hibák |
+| :-: | --- | --- | --- | --- |
 | Regisztráció | 2024.11.07. | A felhasználó sikeresen regisztráljon. | A regisztráció sikeresen működik. | Nincs hiba. |
 | Bejelentkezés.(login) | 2024.11.09. |Bejelentkezés sikeresen működjön. | A bejelentkezés sikeresen működik. | Nincs hiba. |
 | Elfelejtett jelszó | 2024.11.11. | Új jelszó beállítható, biztonsági kérdéssel. | A biztonsági kérdéses új jelszó beállítása sikertelen. | Adatbázis hiba. |
@@ -34,6 +36,7 @@ A végleges tesztelés során az összes fent felsorolt vizsgálati elem újra e
 
 ## Végleges teszt
 | Vizsgálat | Tesztelés időpontja | Elvárás | Eredmény | Hibák |
+| :-: | --- | --- | --- | --- |
 | Regisztráció | 2024.11.08. | A felhasználó sikeresen regisztráljon. | Minden funkció megfelelően működik. | Nincs hiba. |
 | Bejelentkezés.(login) | 2024.11.10. |Bejelentkezés sikeresen működjön. | A bejelentkezés sikeres. | Nincs hiba. |
 | Elfelejtett jelszó | 2024.11.12. | Új jelszó beállítható, biztonsági kérdéssel. | Az új jelszó sikeresen beállítható. | Nincs hiba. |
