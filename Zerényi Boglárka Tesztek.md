@@ -10,6 +10,9 @@ Ebben a dokumentumban lesz felsorolva az elvégzett tesztek elvárásai és ered
 | :---: | --- | --- | --- | --- |
 | Inventory oldal (combo box) | 2024.11.24. | Type és Status mezőből választható legyen opció. | A legördülő listák nem működnek. | Nincs opció a listákban. |
 | Add gomb | 2024.11.16. | Új tétel sikeresen hozzáadható legyen. | Nem lehet új tételt hozzáadni. | Adatok nem mentődnek. |
+| Update gomb | 2024.11.18. | Létező tétel frissítése működjön. | Frissítés sikertelen. | A módosítások nem jelennek meg. |
+| Clear gomb | 2024.11.20. |Mezők tartalmának törlése sikeresen történjen.| A mezők törlése nem működik. | Gomb nem aktív. |
+| Delete gomb | 2024.11.22. | Tétel törlése sikeresen végrehajtódjon. | A törlés nem hajtható végre. | Hibás adatbázis-lekérdezés. |
 
 Az Alfa tesztelés során a vizsgált elemek mind hibátlanul működtek mindenféle fennakadások nélkül.
 Az Alfa tesztelés során a vizsgált elemek között volt ami nem megfelelően működött, ez a későbbiek során javításra szorul.
