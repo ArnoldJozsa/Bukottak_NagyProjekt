@@ -36,12 +36,17 @@ A végleges tesztelés során az összes fent felsorolt vizsgálati elem újra e
 ## Végleges teszt
 | Vizsgálat | Tesztelés időpontja | Elvárás | Eredmény | Hibák |
 | :---: | --- | --- | --- | --- |
-| ... | 2022.xx.xx. | ... | ... | ... |
+| Inventory oldal (combo box) | 2024.11.14. | Type és Status mezőből választható legyen opció. | A legördülő listák most már helyesen működnek. | Nincs hiba. |
+| Add gomb | 2024.11.16. | Új tétel sikeresen hozzáadható legyen. | Az új tétel hozzáadása sikeresen működik. | Nincs hiba. |
+| Update gomb | 2024.11.18. | Létező tétel frissítése működjön. | A frissítés sikeresen végrehajtódik. | Nincs hiba. |
+| Clear gomb | 2024.11.20. | Mezők tartalmának törlése sikeresen történjen. | A mezők törlése most már működik. | Nincs hiba. |
+| Delete gomb | 2024.11.22. | Tétel törlése sikeresen végrehajtódjon. | A tétel törlés most már sikeresen működik. | Nincs hiba. |
+
 
 A Végleges teszt lezajlott és minden funkció rendesen működik, esztétikailag is megfelelő a program.
 
 Átadásra készen áll a megrendelőnek.
 
-Tesztelést végezte és írta: Vezetéknév Keresztnév
+Tesztelést végezte és írta: Zerényi Boglárka
 
 Befejezve: 2022.xx.xx.
