@@ -22,7 +22,11 @@ Következő tesztelésnél a többi funkció kerül vizsgálatra illetve elemzé
 
 | Vizsgálat | Tesztelés időpontja | Elvárás | Eredmény | Hibák |
 | :---: | --- | --- | --- | --- |
-| ... | 2022.xx.xx. | ... | ... | ... |
+| Inventory oldal (combo box) | 2024.11.14. | Type és Status mezőből választható legyen opció. | A legördülő listák most már helyesen működnek. | Nincs hiba. |
+| Add gomb | 2024.11.16. | Új tétel sikeresen hozzáadható legyen. | Az új tétel hozzáadása sikeresen működik. | Nincs hiba. |
+| Update gomb | 2024.11.18. | Létező tétel frissítése működjön. | A frissítés sikeresen végrehajtódik. | Nincs hiba. |
+| Clear gomb | 2024.11.20. | Mezők tartalmának törlése sikeresen történjen. | A mezők törlése most már működik. | Nincs hiba. |
+| Delete gomb | 2024.11.22. | Tétel törlése sikeresen végrehajtódjon. | A tétel törlés most már sikeresen működik. | Nincs hiba. |
 
 A Béta teszt sikeresen zajlott.
 A Béta teszt során akadtan hibák, mely(ek) javításra szorulnak.
