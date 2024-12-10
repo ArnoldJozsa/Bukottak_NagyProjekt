@@ -49,4 +49,4 @@ A Végleges teszt lezajlott és minden funkció rendesen működik, esztétikail
 
 Tesztelést végezte és írta: Zerényi Boglárka
 
-Befejezve: 2022.xx.xx.
+Befejezve: 2024.12.10.
