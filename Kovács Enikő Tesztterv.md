@@ -44,5 +44,5 @@ A végleges tesztelés során az összes fent felsorolt vizsgálati elem újra e
 
 A Végleges teszt lezajlott és minden funkció rendesen működik, esztétikailag is megfelelő a program.
 Átadásra készen áll a megrendelőnek.
-Tesztelést végezte és írta: Vezetéknév Keresztnév
+Tesztelést végezte és írta: Kovács Enikő
 Befejezve: 2024.12.04.
