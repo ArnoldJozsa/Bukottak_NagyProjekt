@@ -63,4 +63,4 @@ Adatbázis csatlakozási probléma megoldása folyamatban van.
 
 Tesztelést végezte és írta: Józsa Arnold
 
-Befejezve: 2022.12.01.
+Befejezve: 2024.12.01.
